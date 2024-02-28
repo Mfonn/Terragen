@@ -19,7 +19,7 @@ const HomeView = () => {
             />
 
             <ImageSectionComp
-                imageSource = "bg-[url('./assets/images/section_background_4.jpg')]"
+                imageSource = "bg-[url('/assets/images/section_background_4.jpg')]"
                 title = "Solar Roof"
                 titleColor = "text-white"
                 description="Produce Clean Energy From Your Roof."
@@ -28,7 +28,7 @@ const HomeView = () => {
             />
 
             <ImageSectionComp
-                imageSource = "bg-[url('./assets/images/section_background_2.jpg')]"
+                imageSource = "bg-[url('/assets/images/section_background_2.jpg')]"
                 title = "Solar Roof"
                 titleColor = "text-white"
                 description="Produce Clean Energy From Your Roof."
@@ -37,7 +37,7 @@ const HomeView = () => {
             />
 
             <ImageSectionComp
-                imageSource = "bg-[url('./assets/images/section_background_3.jpg')]"
+                imageSource = "bg-[url('/assets/images/section_background_3.jpg')]"
                 title = "Solar Roof"
                 titleColor = "text-black"
                 description="Produce Clean Energy From Your Roof."
@@ -56,7 +56,7 @@ const HomeView = () => {
             />
 
             <ImageSectionComp
-                imageSource = "bg-[url('./assets/images/section_background_1.jpg')] text-white"
+                imageSource = "bg-[url('/assets/images/section_background_1.jpg')] text-white"
                 title = "Section 1"
                 titleColor = "text-white"
                 description="A little description for this section."
@@ -65,7 +65,7 @@ const HomeView = () => {
             />
 
             <ImageSectionComp
-                imageSource = "bg-[url('./assets/images/section_background_5.jpg')]"
+                imageSource = "bg-[url('/assets/images/section_background_5.jpg')]"
                 title = "Solar Roof"
                 titleColor = "text-white"
                 description="Produce Clean Energy From Your Roof."
