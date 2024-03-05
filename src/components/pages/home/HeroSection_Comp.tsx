@@ -5,11 +5,10 @@ type propsType = {
     videoSource: string,
     title: string,
     subTitle: string,
-    description: string,
     leftButtonText: string,
     rightButtonText: string,
 }
-const HeroSectionComp = ({ videoSource, title, subTitle, description, leftButtonText, rightButtonText }: propsType) => {
+const HeroSectionComp = ({ videoSource, title, subTitle, leftButtonText, rightButtonText }: propsType) => {
 
     return (
         <section className="h-screen w-full flex flex-col items-center justify-between">
@@ -18,9 +17,8 @@ const HeroSectionComp = ({ videoSource, title, subTitle, description, leftButton
             </video>
 
             <div className="h-[200px] w-auto mt-[70px] px-[30px] flex flex-col justify-center bg-gradient-to-b from-transparent via-white/20 to-white/30 z-10">
-                <h1 className="font-bold text-center text-white text-2xl xl:text-3xl">{ title }</h1>
-                <p className="mt-5 font-semibold text-center text-white">{ subTitle }</p>
-                <small className="mt-2 font-semibold text-center text-white">{ description }</small>
+                <h1 className="font-bold text-center text-blue-800 text-2xl xl:text-3xl">{ title }</h1>
+                <p className="mt-5 font-semibold text-center text-lg text-white">{ subTitle }</p>
             </div>
 
             <div className="mb-[2vh] flex flex-col items-center z-10">

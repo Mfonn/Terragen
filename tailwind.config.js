@@ -17,7 +17,22 @@ export default {
       }
     },
 
-    extend: {},
+    extend: {
+      animation: {
+        spinOnce: "spinOnce 1s linear",
+      },
+
+      keyframes: {
+        spinOnce: {
+          from: {
+            transform: "rotate(0deg)"
+          },
+          to: {
+            transform: "rotate(360deg)"
+          },
+        },
+      }
+    },
   },
   plugins: [],
 }

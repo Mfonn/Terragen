@@ -11,106 +11,112 @@ const AppHeaderComp = () => {
 
     const menuItems = [
         {
-            name: "Generators",
+            name: "Capsule",
             link: "#",
             subMenuItems: [
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_1.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model B",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_5.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model C",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_3.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model D",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_4.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model E",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_2.png"
-                },
-                {
-                    title: "Model F",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_6.png"
-                },
-                {
-                    title: "Model G",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_7.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
             ]
         },
         {
-            name: "Solar Panels",
+            name: "Terra Academy",
             link: "#",
             subMenuItems: [
 
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_3.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_4.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_5.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_6.png"
-                },
-                {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_7.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
             ]
         },
         {
-            name: "Chargers",
+            name: "Terra Lab",
             link: "#",
             subMenuItems: [
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_4.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model B",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_1.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model C",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_5.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model D",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_3.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
                     title: "Model E",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_2.png"
+                    imageSource: "./assets/images/capsule_02.png"
+                },
+            ]
+        },
+        {
+            name: "Discover",
+            link: "#",
+            subMenuItems: [
+                {
+                    title: "Model A",
+                    subTitle: "Energy From Your Roof",
+                    imageSource: "./assets/images/capsule_02.png"
+                },
+                {
+                    title: "Model A",
+                    subTitle: "Energy From Your Roof",
+                    imageSource: "./assets/images/capsule_02.png"
+                },
+                {
+                    title: "Model A",
+                    subTitle: "Energy From Your Roof",
+                    imageSource: "./assets/images/capsule_02.png"
                 },
             ]
         },
@@ -121,27 +127,22 @@ const AppHeaderComp = () => {
                 {
                     title: "Model A",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_1.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
-                    title: "Model A",
+                    title: "Model B",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_2.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
-                    title: "Model A",
+                    title: "Model C",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_3.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
                 {
-                    title: "Model A",
+                    title: "Model D",
                     subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_4.png"
-                },
-                {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/home_menu_item_5.png"
+                    imageSource: "./assets/images/capsule_02.png"
                 },
             ]
         },
@@ -222,7 +223,7 @@ const AppHeaderComp = () => {
                         <li key={ eachMenuItem.name }
                             onMouseEnter={ () => handleUpdateMenuIndex(index) }
                             className="list-none">
-                            <NavLink to={eachMenuItem.link} className="no-underline text-white hover:text-black visited:text-black hover:bg-gray-100 px-3 py-2 hover:px-3 hover:py-2 z-10">
+                            <NavLink to={eachMenuItem.link} className="no-underline font-medium text-sm text-white hover:text-black visited:text-gray-600 hover:bg-gray-100 px-3 py-2 hover:px-3 hover:py-2 z-10">
                                 {eachMenuItem.name}
                             </NavLink>
                         </li>
@@ -271,7 +272,7 @@ const AppHeaderComp = () => {
             <div
                 onMouseEnter={ () => handleChangeMenuDropdown(true) }
                 onMouseLeave={ () => handleChangeMenuDropdown(false) }
-                className={`max-h-[65vh] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] fixed bg-white transition-all duration-300 z-30 lg:z-10 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[65vh] -top-[67vh] ease-out" }`}>
+                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-30 lg:z-10 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[30vh] -top-[67vh] ease-out" }`}>
 
                 <div className="lg:hidden px-5 py-2 flex justify-end">
                     <button onClick={ () => handleChangeMenuDropdown(false) } className="cursor-pointer">
@@ -296,10 +297,10 @@ const AppHeaderComp = () => {
                     {
                         menuItems[state.menuIndex].subMenuItems.map(eachSubItem => (
                             <div key={eachSubItem.imageSource} className="v-full w-full flex flex-col items-center justify-center">
-                                <img src={ eachSubItem.imageSource } alt="" className="h-[40%] md:h-[30%] xl:h-[40%] w-auto"/>
+                                <img src={ eachSubItem.imageSource } alt="" className="h-[70px] w-auto"/>
                                 <h1 className="mt-2 font-bold text-sm lg:text-lg">{ eachSubItem.title }</h1>
                                 <small className="hidden lg:block text-center">{ eachSubItem.subTitle }</small>
-                                <Link to="#" className="underline underline-offset-2 decoration-0">Learn more</Link>
+                                {/*<Link to="#" className="underline underline-offset-2 decoration-0">Learn more</Link>*/}
                             </div>
                         ))
                     }

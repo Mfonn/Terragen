@@ -2,8 +2,10 @@
 /*==== Import Components ====*/
 import AppLayoutHOC from "../components/layout/AppLayout_HOC";
 import HeroSectionComp from "../components/pages/home/HeroSection_Comp";
-import VideoSectionComp from "../components/pages/home/VideoSection_Comp";
-import ImageSectionComp from "../components/pages/home/ImageSection_Comp";
+import TerraAcademyComp from "../components/pages/home/TerraAcademy_Comp";
+import TerraLabComp from "../components/pages/home/TerraLab_Comp";
+import TerraShopComp from "../components/pages/home/TerraShop_Comp";
+
 
 
 const HomeView = () => {
@@ -11,47 +13,25 @@ const HomeView = () => {
         <AppLayoutHOC>
             <HeroSectionComp
                 videoSource = "/assets/videos/pexels_video_2.mp4"
-                title = "Blazing"
-                subTitle = "From $31,890"
-                description="After Federal Tax Credit & Est. Gas Savings"
-                leftButtonText="Custom order"
+                title = "TerraGen"
+                subTitle = "Loving The Earth Means Rethinking Power Generation"
+                leftButtonText="Pre-Order"
                 rightButtonText="Learn More"
             />
 
-            <ImageSectionComp
-                imageSource = "bg-[url('/assets/images/section_background_4.jpg')]"
-                title = "Solar Roof"
-                titleColor = "text-white"
-                description="Produce Clean Energy From Your Roof."
-                leftButtonText="Custom order"
-                rightButtonText="Learn More"
-            />
+            <TerraAcademyComp />
 
-            <ImageSectionComp
-                imageSource = "bg-[url('/assets/images/section_background_2.jpg')]"
-                title = "Solar Roof"
-                titleColor = "text-white"
-                description="Produce Clean Energy From Your Roof."
-                leftButtonText="Custom order"
-                rightButtonText="Learn More"
-            />
+            <TerraLabComp />
 
-            <ImageSectionComp
-                imageSource = "bg-[url('/assets/images/section_background_3.jpg')]"
-                title = "Solar Roof"
-                titleColor = "text-black"
-                description="Produce Clean Energy From Your Roof."
-                leftButtonText="Custom order"
-                rightButtonText="Learn More"
-            />
+            <TerraShopComp />
 
-            <VideoSectionComp
+            {/*<VideoSectionComp
                 videoSource = "/assets/videos/pexels_video_6.mp4"
                 title = "Blazing"
                 titleColor = "text-white"
                 subTitle = "From $31,890"
                 description="After Federal Tax Credit & Est. Gas Savings"
-                leftButtonText="Custom order"
+                leftButtonText="Pre-Order"
                 rightButtonText="Learn More"
             />
 
@@ -60,7 +40,7 @@ const HomeView = () => {
                 title = "Section 1"
                 titleColor = "text-white"
                 description="A little description for this section."
-                leftButtonText="Custom order"
+                leftButtonText="Pre-Order"
                 rightButtonText="Existing inventory"
             />
 
@@ -69,9 +49,9 @@ const HomeView = () => {
                 title = "Solar Roof"
                 titleColor = "text-white"
                 description="Produce Clean Energy From Your Roof."
-                leftButtonText="Custom order"
+                leftButtonText="Pre-Order"
                 rightButtonText="Learn More"
-            />
+            />*/}
         </AppLayoutHOC>
     );
 };
