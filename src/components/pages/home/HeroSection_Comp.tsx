@@ -1,5 +1,3 @@
-import {Slide} from "react-awesome-reveal";
-import {IoIosArrowDown} from "react-icons/io";
 
 type propsType = {
     videoSource: string,
@@ -8,20 +6,25 @@ type propsType = {
     leftButtonText: string,
     rightButtonText: string,
 }
-const HeroSectionComp = ({ videoSource, title, subTitle, leftButtonText, rightButtonText }: propsType) => {
+const HeroSectionComp = ({ videoSource }: propsType) => {
 
     return (
-        <section className="h-screen w-full flex flex-col items-center justify-between">
+        <section className="h-screen w-full flex flex-col items-center justify-end">
+            <div className="h-full w-full absolute inset-0 bg-black/20 z-10" />
             <video className="h-full w-full absolute inset-0 object-cover z-0" autoPlay loop muted>
                 <source src={ videoSource } type="video/mp4" />
             </video>
 
-            <div className="h-[200px] w-auto mt-[70px] px-[30px] flex flex-col justify-center bg-gradient-to-b from-transparent via-white/20 to-white/30 z-10">
+            {/*<div className="h-[200px] w-auto mt-[70px] px-[30px] flex flex-col justify-center bg-gradient-to-b from-transparent via-white/20 to-white/30 z-10">
                 <h1 className="font-bold text-center text-blue-800 text-2xl xl:text-3xl">{ title }</h1>
                 <p className="mt-5 font-semibold text-center text-lg text-white">{ subTitle }</p>
+            </div>*/}
+
+            <div className="h-auto w-full mb-[2vh] flex justify-end z-20">
+                <img src="/assets/images/rethinking_power.png" alt="Rethinking Power" className="h-[200px] w-auto" />
             </div>
 
-            <div className="mb-[2vh] flex flex-col items-center z-10">
+            {/*<div className="mb-[2vh] flex flex-col items-center z-10">
                 <Slide direction={"up"} delay={3} duration={1000}>
                     <div className="mb-[5vh] flex flex-col lg:flex-row items-center gap-6">
                         <button className="h-auto w-[250px] py-2 bg-black/50 rounded-full font-extralight text-lg text-white">{ leftButtonText }</button>
@@ -33,7 +36,7 @@ const HeroSectionComp = ({ videoSource, title, subTitle, leftButtonText, rightBu
                 </Slide>
 
                 <IoIosArrowDown className="animate-bounce" size={24} color={"green"} />
-            </div>
+            </div>*/}
         </section>
     );
 }

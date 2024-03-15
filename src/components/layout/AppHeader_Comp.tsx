@@ -42,29 +42,29 @@ const AppHeaderComp = () => {
             ]
         },
         {
-            name: "Terra Academy",
+            name: "TerrAcademy",
             link: "#",
             subMenuItems: [
 
                 {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/capsule_02.png"
+                    title: "",
+                    subTitle: "Product Engineering and Assembly Certification",
+                    imageSource: "./assets/images/certificate_01.png"
                 },
                 {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/capsule_02.png"
+                    title: "",
+                    subTitle: "Product Installation Certification",
+                    imageSource: "./assets/images/certificate_02.png"
                 },
                 {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/capsule_02.png"
+                    title: "",
+                    subTitle: "Product Servicing Certification",
+                    imageSource: "./assets/images/certificate_03.png"
                 },
                 {
-                    title: "Model A",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/capsule_02.png"
+                    title: "",
+                    subTitle: "Technical Software Support Certification",
+                    imageSource: "./assets/images/certificate_04.png"
                 },
             ]
         },
@@ -89,11 +89,6 @@ const AppHeaderComp = () => {
                 },
                 {
                     title: "Model D",
-                    subTitle: "Energy From Your Roof",
-                    imageSource: "./assets/images/capsule_02.png"
-                },
-                {
-                    title: "Model E",
                     subTitle: "Energy From Your Roof",
                     imageSource: "./assets/images/capsule_02.png"
                 },
@@ -171,15 +166,15 @@ const AppHeaderComp = () => {
     }
 
     return (
-        <div className="h-screen w-full absolute inset-0 p-0 m-0 z-50">
+        // <div className="h-screen w-full absolute inset-0 p-0 m-0 z-50">
+        <div className="h-auto w-full">
 
             {/*=== Nav Bar ===*/}
-            <nav className="h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 z-20
-            bg-gradient-to-b from-white to-transparent">
+            <nav className="h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 bg-white z-20">
 
                 <div className="h-full w-full lg:w-[25%] flex items-center justify-between z-20">
                     <Link to="/home">
-                        <div className="h-[40px] w-[90px] md:h-[50px] md:w-[110px]"
+                        <div className="h-[50px] w-[100px] md:h-[70px] md:w-[130px]"
                              style={{
                                  background: "url('/assets/images/logo_dark.png') no-repeat left center",
                                  backgroundSize: "contain",
@@ -293,17 +288,36 @@ const AppHeaderComp = () => {
                     </button>
                 </div>
 
-                <div className="h-full w-full container grid grid-cols-3 lg:grid-cols-4 gap-7 z-50">
-                    {
-                        menuItems[state.menuIndex].subMenuItems.map(eachSubItem => (
-                            <div key={eachSubItem.imageSource} className="v-full w-full flex flex-col items-center justify-center">
+                <div className="h-full w-full container grid grid-cols-3 lg:grid-cols-4 items-start gap-7 z-50">
+                    { (state.menuIndex === 0) ? (
+                        <div className="v-full w-full col-span-4 flex items-center justify-center gap-x-10">
+                            <img src="/assets/images/capsule_01.png" alt="" className="h-[200px] w-auto" />
+
+                            <div className="h-[200px] border border-gray-300" />
+
+                            <div className="flex flex-col gap-y-5">
+                                <Link to="/product_details">
+                                    <button className="h-auto w-[250px] py-2 bg-black hover:bg-blue-900 rounded-full font-semibold text-lg text-white">Features</button>
+                                </Link>
+
+                                <Link to="/order">
+                                    <button className="h-auto w-[250px] py-2 bg-blue-900 hover:bg-black rounded-full font-semibold text-lg text-white">Pre-Order</button>
+                                </Link>
+
+                            </div>
+                        </div>
+                    ) : (
+                        menuItems[state.menuIndex].subMenuItems.map((eachSubItem, index) => (
+                            <div key={ index } className="v-full w-full flex flex-col items-center justify-center">
                                 <img src={ eachSubItem.imageSource } alt="" className="h-[70px] w-auto"/>
                                 <h1 className="mt-2 font-bold text-sm lg:text-lg">{ eachSubItem.title }</h1>
                                 <small className="hidden lg:block text-center">{ eachSubItem.subTitle }</small>
-                                {/*<Link to="#" className="underline underline-offset-2 decoration-0">Learn more</Link>*/}
+                                <Link to="#" className="underline underline-offset-2 decoration-0">Learn more</Link>
                             </div>
                         ))
-                    }
+                    ) }
+
+
                 </div>
             </div>
         </div>

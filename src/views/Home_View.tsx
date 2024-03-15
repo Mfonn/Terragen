@@ -24,34 +24,6 @@ const HomeView = () => {
             <TerraLabComp />
 
             <TerraShopComp />
-
-            {/*<VideoSectionComp
-                videoSource = "/assets/videos/pexels_video_6.mp4"
-                title = "Blazing"
-                titleColor = "text-white"
-                subTitle = "From $31,890"
-                description="After Federal Tax Credit & Est. Gas Savings"
-                leftButtonText="Pre-Order"
-                rightButtonText="Learn More"
-            />
-
-            <ImageSectionComp
-                imageSource = "bg-[url('/assets/images/section_background_1.jpg')] text-white"
-                title = "Section 1"
-                titleColor = "text-white"
-                description="A little description for this section."
-                leftButtonText="Pre-Order"
-                rightButtonText="Existing inventory"
-            />
-
-            <ImageSectionComp
-                imageSource = "bg-[url('/assets/images/section_background_5.jpg')]"
-                title = "Solar Roof"
-                titleColor = "text-white"
-                description="Produce Clean Energy From Your Roof."
-                leftButtonText="Pre-Order"
-                rightButtonText="Learn More"
-            />*/}
         </AppLayoutHOC>
     );
 };

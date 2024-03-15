@@ -35,7 +35,7 @@ const AppLayoutHOC = ({ children }: PropsWithChildren) => {
     };
 
     return (
-        <main className="h-screen, w-full">
+        <main className="h-full w-full">
             <HelmetProvider>
                 <Helmet {...metaData} />
             </HelmetProvider>
