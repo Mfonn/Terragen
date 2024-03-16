@@ -167,10 +167,10 @@ const AppHeaderComp = () => {
 
     return (
         // <div className="h-screen w-full absolute inset-0 p-0 m-0 z-50">
-        <div className="h-auto w-full">
+        <div className="h-auto w-full z-20">
 
             {/*=== Nav Bar ===*/}
-            <nav className="h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 bg-white z-20">
+            <nav className="h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 bg-white z-30">
 
                 <div className="h-full w-full lg:w-[25%] flex items-center justify-between z-20">
                     <Link to="/home">
@@ -267,7 +267,7 @@ const AppHeaderComp = () => {
             <div
                 onMouseEnter={ () => handleChangeMenuDropdown(true) }
                 onMouseLeave={ () => handleChangeMenuDropdown(false) }
-                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-30 lg:z-10 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[30vh] -top-[67vh] ease-out" }`}>
+                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-20 lg:z-20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[30vh] -top-[67vh] ease-out" }`}>
 
                 <div className="lg:hidden px-5 py-2 flex justify-end">
                     <button onClick={ () => handleChangeMenuDropdown(false) } className="cursor-pointer">

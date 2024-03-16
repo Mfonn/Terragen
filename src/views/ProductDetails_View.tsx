@@ -37,15 +37,16 @@ const ProductDetailsView: React.FC = () => {
             }
         ],
     });
+
     const captchaInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        !state.isNotRobot && loadCaptchaEnginge(6);
+        loadCaptchaEnginge(6);
     }, []);
 
     const submitCaptcha = () => {
         if (captchaInputRef.current) {
-            const user_captcha= captchaInputRef.current.value;
+            const user_captcha = captchaInputRef.current.value;
             console.log("CAPTCHA VALUE::: ", user_captcha);
 
             if (validateCaptcha(user_captcha) === true) {
@@ -93,9 +94,9 @@ const ProductDetailsView: React.FC = () => {
 
     return (
         <AppLayoutHOC>
-            <section className="h-full w-full">
-                { (!state.isNotRobot) ? (
-                    <div className="h-full w-full grid place-content-center">
+            <section className="h-full w-full z-100">
+                { (state.isNotRobot) ? (
+                    <div className="h-full w-full container mt-[120px] px-4 pb-10 grid place-content-center">
                         <form onSubmit={ () => submitCaptcha() }
                               className="h-auto max-w-[400px] px-16 py-10 flex flex-col items-center justify-center gap-y-5 border border-1 rounded-xl bg-black/10">
                             <LoadCanvasTemplate />
