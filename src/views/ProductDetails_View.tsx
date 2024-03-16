@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 
 
@@ -7,9 +7,9 @@ import AppLayoutHOC from "../components/layout/AppLayout_HOC";
 import {IoIosArrowDown} from "react-icons/io";
 
 
-const ProductDetailsView: React.FC = () => {
+const ProductDetailsView = () => {
     const [state, setState] = useState({
-        isNotRobot: true,
+        isNotRobot: false,
         quantity: 1,
         product: {
             name: "TerraGen CAPSULE",
@@ -44,10 +44,12 @@ const ProductDetailsView: React.FC = () => {
         loadCaptchaEnginge(6);
     }, []);
 
-    const submitCaptcha = () => {
+    const submitCaptcha = (event) => {
+        event.preventDefault();
+
         if (captchaInputRef.current) {
             const user_captcha = captchaInputRef.current.value;
-            console.log("CAPTCHA VALUE::: ", user_captcha);
+            // console.log("CAPTCHA VALUE::: ", user_captcha);
 
             if (validateCaptcha(user_captcha) === true) {
                 setState(prevState => ({
@@ -95,19 +97,20 @@ const ProductDetailsView: React.FC = () => {
     return (
         <AppLayoutHOC>
             <section className="h-full w-full z-100">
-                { (state.isNotRobot) ? (
+                <p>{ state.isNotRobot }</p>
+                {(!state.isNotRobot) ? (
                     <div className="h-full w-full container mt-[120px] px-4 pb-10 grid place-content-center">
-                        <form onSubmit={ () => submitCaptcha() }
+                        <form onSubmit={ (event) => submitCaptcha(event) }
                               className="h-auto max-w-[400px] px-16 py-10 flex flex-col items-center justify-center gap-y-5 border border-1 rounded-xl bg-black/10">
                             <LoadCanvasTemplate />
 
                             <input type="text" name="user_captcha_input"
                                    placeholder="Enter Captcha Value"
                                    ref={captchaInputRef}
-                                   className="form-control w-full bg-clip-padding border border-gray-200/70 bg-transparent rounded font-normal text-base px-3 py-3 shadow-sm shadow-gray-200
+                                   className="form-control w-full bg-clip-padding border border-gray-400 bg-transparent rounded font-normal text-base px-3 py-3 shadow-sm shadow-gray-200
                                 focus:bg-transparent focus:border-gray-400 focus:outline-none"
                             />
-                            <button onClick={ () => submitCaptcha() }
+                            <button onClick={ (event) => submitCaptcha(event) }
                                     className="h-auto w-[150px] lg:w-[250px] py-2 bg-black/50 rounded-full font-medium lg:font-semibold text-white" >
                                 Submit
                             </button>

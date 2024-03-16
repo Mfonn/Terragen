@@ -16,7 +16,7 @@ const AppFooterComp = () => {
                 <div>
                     <div className="flex items-center gap-4">
                         <Link to="/home">
-                            <img src="/assets/images/logo_light.png" alt="App Logo"/>
+                            <img src="/assets/images/logo_light.png" alt="App Logo" className="h-[50px] w-auto" />
                         </Link>
                     </div>
                     <p className="mt-4 pr-12 text-sm text-justify text-white">
