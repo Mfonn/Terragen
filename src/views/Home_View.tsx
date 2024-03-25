@@ -5,6 +5,7 @@ import HeroSectionComp from "../components/pages/home/HeroSection_Comp";
 import TerraAcademyComp from "../components/pages/home/TerraAcademy_Comp";
 import TerraLabComp from "../components/pages/home/TerraLab_Comp";
 import TerraShopComp from "../components/pages/home/TerraShop_Comp";
+import TerraGenFeaturesComp from "../components/pages/home/TerraGenFeatures_Comp";
 
 
 
@@ -18,6 +19,8 @@ const HomeView = () => {
                 leftButtonText="Pre-Order"
                 rightButtonText="Learn More"
             />
+
+            <TerraGenFeaturesComp />
 
             <TerraAcademyComp />
 
