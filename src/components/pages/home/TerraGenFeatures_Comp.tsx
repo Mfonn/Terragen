@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import ImageSectionComp from "./ImageSection_Comp";
 import { SlArrowDown, SlArrowRight } from "react-icons/sl";
 
@@ -8,7 +8,7 @@ const TerraGenFeaturesComp = () => {
         selectedInvoiceDetails: 1
     });
 
-    const handleSelectedInvoiceDetailsChange = (value) => {
+    const handleSelectedInvoiceDetailsChange = (value: number) => {
         setState(prevState => ({
             ...prevState,
             selectedInvoiceDetails: (state.selectedInvoiceDetails === value ? 0 : value)
@@ -21,8 +21,8 @@ const TerraGenFeaturesComp = () => {
             title = "FEATURES"
             titleColor = "text-white"
             description="TerraGen Key Features"
-            // leftButtonText="Apply Now"
-            // rightButtonText="Learn More"
+            leftButtonText=""
+            rightButtonText=""
         >
 
             <div className="h-auto w-auto mt-2 lg:mt-5 px-5 py-6 flex flex-col lg:flex-row gap-2">

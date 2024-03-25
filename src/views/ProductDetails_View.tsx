@@ -44,7 +44,7 @@ const ProductDetailsView = () => {
         loadCaptchaEnginge(6);
     }, []);
 
-    const submitCaptcha = (event) => {
+    const submitCaptcha = (event: any) => {
         event.preventDefault();
 
         if (captchaInputRef.current) {
