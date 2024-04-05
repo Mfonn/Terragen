@@ -18,22 +18,22 @@ const TerraAcademyComp = () => {
                 of Technical Certifications and the School of Up-skilling.
             </p>*/}
 
-            <div className="flex items-center gap-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10">
                 <div className="flex flex-col items-center">
-                    <img src="./assets/images/certificate_01.png" alt="Rethinking Power" className="h-[140px] w-auto" />
-                    <p className="w-[170px] font-normal text-[0.8rem] text-center text-white">Product Engineering and Assembly Certification</p>
+                    <img src="./assets/images/certificate_01.png" alt="Rethinking Power" className="h-[100px] lg:h-[140px] w-auto" />
+                    <p className="w-[170px] font-normal text-[0.7rem] lg:text-[0.8rem] text-center text-white">Product Engineering and Assembly Certification</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <img src="./assets/images/certificate_02.png" alt="Rethinking Power" className="h-[140px] w-auto" />
-                    <p className="w-[170px] font-normal text-[0.8rem] text-center text-white">Product Installation Certification</p>
+                    <img src="./assets/images/certificate_03.png" alt="Rethinking Power" className="h-[100px] lg:h-[140px] w-auto" />
+                    <p className="w-[170px] font-normal text-[0.7rem] lg:text-[0.8rem] text-center text-white">Product Servicing <br/>Certification</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <img src="./assets/images/certificate_03.png" alt="Rethinking Power" className="h-[140px] w-auto" />
-                    <p className="w-[170px] font-normal text-[0.8rem] text-center text-white">Product Servicing Certification</p>
+                    <img src="./assets/images/certificate_02.png" alt="Rethinking Power" className="h-[100px] lg:h-[140px] w-auto" />
+                    <p className="w-[170px] font-normal text-[0.7rem] lg:text-[0.8rem] text-center text-white">Product Installation <br/>Certification</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <img src="./assets/images/certificate_04.png" alt="Rethinking Power" className="h-[140px] w-auto" />
-                    <p className="w-[170px] font-normal text-[0.8rem] text-center text-white">Technical Software Support Certification</p>
+                    <img src="./assets/images/certificate_04.png" alt="Rethinking Power" className="h-[100px] lg:h-[140px] w-auto" />
+                    <p className="w-[170px] font-normal text-[0.7rem] lg:text-[0.8rem] text-center text-white">Technical Software Support Certification</p>
                 </div>
             </div>
         </ImageSectionComp>
