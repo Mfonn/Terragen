@@ -267,7 +267,7 @@ const AppHeaderComp = () => {
             <div
                 onMouseEnter={ () => handleChangeMenuDropdown(true) }
                 onMouseLeave={ () => handleChangeMenuDropdown(false) }
-                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-20 lg:z-20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[30vh] -top-[67vh] ease-out" }`}>
+                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-20 lg:z-20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[3vh] -top-[20vh] ease-out" }`}>
 
                 <div className="lg:hidden px-5 py-2 flex justify-end">
                     <button onClick={ () => handleChangeMenuDropdown(false) } className="cursor-pointer">

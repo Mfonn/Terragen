@@ -31,7 +31,7 @@ const TerraGenFeaturesComp = () => {
                     <div onClick={ () => handleSelectedInvoiceDetailsChange(1) }
                          className="h-[70px] lg:h-[400px] w-full lg:w-[70px] px-2 py-2.5 lg:py-4 flex lg:flex-col items-center lg:justify-between gap-2 lg:gap-0 cursor-pointer rounded-xl bg-gray-200">
                         <div className="hidden lg:block" />
-                        { (state.selectedInvoiceDetails === 1) ? <SlArrowRight className="hidden lg:block" /> : <SlArrowDown className="hidden lg:block" /> }
+                        { (state.selectedInvoiceDetails === 1) ? <SlArrowDown className="hidden lg:block" /> : <SlArrowRight className="hidden lg:block" /> }
                         <img src="/assets/images/feature_1.png" alt="Feature Image 01" className="h-[50px] w-[50px] p-2.5 bg-gray-300 rounded-full" />
                         <h3 className="lg:hidden font-semibold text-center text-sm">Fully operates from mobile device</h3>
                     </div>
@@ -52,7 +52,7 @@ const TerraGenFeaturesComp = () => {
                     <div onClick={ () => handleSelectedInvoiceDetailsChange(2) }
                          className="h-[70px] lg:h-[400px] w-full lg:w-[70px] px-2 py-2.5 lg:py-4 flex lg:flex-col items-center lg:justify-between gap-2 lg:gap-0 cursor-pointer rounded-xl bg-gray-200">
                         <div className="hidden lg:block" />
-                        { (state.selectedInvoiceDetails === 2) ? <SlArrowRight className="hidden lg:block" /> : <SlArrowDown className="hidden lg:block" /> }
+                        { (state.selectedInvoiceDetails === 2) ? <SlArrowDown className="hidden lg:block" /> : <SlArrowRight className="hidden lg:block" /> }
                         <img src="/assets/images/feature_2.png" alt="Feature Image 01" className="h-[50px] w-[50px] p-2.5 bg-gray-300 rounded-full" />
                         <h3 className="lg:hidden font-semibold text-center text-sm">Fuelless Operation</h3>
                     </div>
@@ -73,7 +73,7 @@ const TerraGenFeaturesComp = () => {
                     <div onClick={ () => handleSelectedInvoiceDetailsChange(3) }
                          className="h-[70px] lg:h-[400px] w-full lg:w-[70px] px-2 py-2.5 lg:py-4 flex lg:flex-col items-center lg:justify-between gap-2 lg:gap-0 cursor-pointer rounded-xl bg-gray-200">
                         <div className="hidden lg:block" />
-                        { (state.selectedInvoiceDetails === 3) ? <SlArrowRight className="hidden lg:block" /> : <SlArrowDown className="hidden lg:block" /> }
+                        { (state.selectedInvoiceDetails === 3) ? <SlArrowDown className="hidden lg:block" /> : <SlArrowRight className="hidden lg:block" /> }
                         <img src="/assets/images/feature_3.png" alt="Feature Image 01" className="h-[50px] w-[50px] p-2.5 bg-gray-300 rounded-full" />
                         <h3 className="lg:hidden font-semibold text-center text-sm">72-Hour Non-Stop Operation</h3>
                     </div>
@@ -94,7 +94,7 @@ const TerraGenFeaturesComp = () => {
                     <div onClick={ () => handleSelectedInvoiceDetailsChange(4) }
                          className="h-[70px] lg:h-[400px] w-full lg:w-[70px] px-2 py-2.5 lg:py-4 flex lg:flex-col items-center lg:justify-between gap-2 lg:gap-0 cursor-pointer rounded-xl bg-gray-200">
                         <div className="hidden lg:block" />
-                        { (state.selectedInvoiceDetails === 4) ? <SlArrowRight className="hidden lg:block" /> : <SlArrowDown className="hidden lg:block" /> }
+                        { (state.selectedInvoiceDetails === 4) ? <SlArrowDown className="hidden lg:block" /> : <SlArrowRight className="hidden lg:block" /> }
                         <img src="/assets/images/feature_4.png" alt="Feature Image 01" className="h-[50px] w-[50px] p-2.5 bg-gray-300 rounded-full" />
                         <h3 className="lg:hidden font-semibold text-center text-sm">Environmentally Friendly</h3>
                     </div>
