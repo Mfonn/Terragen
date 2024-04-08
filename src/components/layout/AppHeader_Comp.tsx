@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import { BiHelpCircle, BiWorld, BiUserCircle } from "react-icons/bi";
 
@@ -7,6 +7,7 @@ const AppHeaderComp = () => {
         isNavBarOpen: false,
         isMenuDropdownOpen: false,
         menuIndex: 0,
+        scroll: false
     });
 
     const menuItems = [
@@ -143,6 +144,14 @@ const AppHeaderComp = () => {
         },
     ];
 
+    useEffect(() => {
+        window.addEventListener("scroll", handleToggleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleToggleScroll);
+        }
+    }, []);
+
 
     const handleToggleNavBar = () => {
         setState(prevState => ({
@@ -150,19 +159,32 @@ const AppHeaderComp = () => {
             isNavBarOpen: !state.isNavBarOpen,
             isMenuDropdownOpen: false,
         }));
-    }
+    };
+    const handleToggleScroll = () => {
+        if (window.scrollY >= 400) {
+            setState(prevState => ({
+                ...prevState,
+                scroll: true,
+            }));
+        } else {
+            setState(prevState => ({
+                ...prevState,
+                scroll: false,
+            }));
+        }
+    };
     const handleChangeMenuDropdown = (value: boolean) => {
         // console.log("EVENT::: ", value);
         setState(prevState => ({
             ...prevState,
             isMenuDropdownOpen: value,
         }));
-    }
+    };
     const handleUpdateMenuIndex = (selectedIndex: number) => {
         setState(prevState => ({
             ...prevState,
             menuIndex: selectedIndex,
-        }))
+        }));
     }
 
     return (
@@ -170,7 +192,7 @@ const AppHeaderComp = () => {
         <div className="h-auto w-full z-20">
 
             {/*=== Nav Bar ===*/}
-            <nav className="h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 bg-white z-30">
+            <nav className={`h-[70px] w-auto px-4 lg:px-[40px] flex justify-between items-center text-gray-700 fixed inset-0 bottom-0 ${ state.scroll ? "bg-white" : "bg-transparent" } z-30`}>
 
                 <div className="h-full w-full lg:w-[25%] flex items-center justify-between z-20">
                     <Link to="/home">
@@ -218,7 +240,7 @@ const AppHeaderComp = () => {
                         <li key={ eachMenuItem.name }
                             onMouseEnter={ () => handleUpdateMenuIndex(index) }
                             className="list-none">
-                            <NavLink to={eachMenuItem.link} className="no-underline font-medium text-sm text-white hover:text-black visited:text-gray-600 hover:bg-gray-100 px-3 py-2 hover:px-3 hover:py-2 z-10">
+                            <NavLink to={eachMenuItem.link} className="no-underline font-medium text-sm text-gray-300 hover:text-black visited:text-gray-300 hover:bg-gray-100 px-3 py-2 hover:px-3 hover:py-2 z-10">
                                 {eachMenuItem.name}
                             </NavLink>
                         </li>
@@ -267,7 +289,7 @@ const AppHeaderComp = () => {
             <div
                 onMouseEnter={ () => handleChangeMenuDropdown(true) }
                 onMouseLeave={ () => handleChangeMenuDropdown(false) }
-                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-20 lg:z-20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[3vh] -top-[20vh] ease-out" }`}>
+                className={`max-h-[400px] h-auto w-[100%] px-0 lg:px-10 py-3 lg:pt-[80px] bg-white transition-all duration-300 z-50 lg:z-20 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] fixed ${ (state.isMenuDropdownOpen) ? "bottom-0 lg:top-0 ease-in" : "-bottom-[35vh] lg:-top-[40vh] ease-out" }`}>
 
                 <div className="lg:hidden px-5 py-2 flex justify-end">
                     <button onClick={ () => handleChangeMenuDropdown(false) } className="cursor-pointer">
@@ -291,17 +313,17 @@ const AppHeaderComp = () => {
                 <div className="h-full w-full container grid grid-cols-3 lg:grid-cols-4 items-start gap-7 z-50">
                     { (state.menuIndex === 0) ? (
                         <div className="v-full w-full col-span-4 flex items-center justify-center gap-x-10">
-                            <img src="/assets/images/capsule_01.png" alt="" className="h-[200px] w-auto" />
+                            <img src="/assets/images/capsule_01.png" alt="" className="h-[100px] lg:h-[200px] w-auto" />
 
                             <div className="h-[200px] border border-gray-300" />
 
                             <div className="flex flex-col gap-y-5">
                                 <Link to="/product_details">
-                                    <button className="h-auto w-[250px] py-2 bg-black hover:bg-blue-900 rounded-full font-semibold text-lg text-white">Features</button>
+                                    <button className="h-auto w-[150px] lg:w-[250px] py-2 bg-black hover:bg-blue-900 rounded-full font-normal lg:font-semibold text-sm lg:text-lg text-white">Features</button>
                                 </Link>
 
                                 <Link to="/order">
-                                    <button className="h-auto w-[250px] py-2 bg-blue-900 hover:bg-black rounded-full font-semibold text-lg text-white">Pre-Order</button>
+                                    <button className="h-auto w-[150px] lg:w-[250px] py-2 bg-blue-900 hover:bg-black rounded-full font-normal lg:font-semibold text-sm lg:text-lg text-white">Pre-Order</button>
                                 </Link>
 
                             </div>

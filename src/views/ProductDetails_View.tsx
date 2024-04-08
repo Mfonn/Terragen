@@ -4,7 +4,6 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-s
 
 /*==== Import Components ====*/
 import AppLayoutHOC from "../components/layout/AppLayout_HOC";
-import {IoIosArrowDown} from "react-icons/io";
 
 
 const ProductDetailsView = () => {
@@ -68,22 +67,18 @@ const ProductDetailsView = () => {
         }
     };
 
-    /*const handleAddToCart = (productItem) => {
-        setState((prevState) => ({
-            ...prevState,
-            productList:  state.productList.push(productItem),
-        }));
+    const handleAddToCart = () => {
         alert('Product added to cart!');
-    };*/
+    };
 
-    /*const handleUpdateQuantity = (quantity) => {
+    const handleUpdateQuantity = (quantity: number) => {
         setState((prevState) => ({
             ...prevState,
             quantity:  quantity,
         }));
-    };*/
+    };
 
-    /*const handleUpdateImageURL = (imageURL) => {
+    const handleUpdateImageURL = (imageURL: string) => {
         setState((prevState) => ({
             ...prevState,
             product: {
@@ -91,7 +86,7 @@ const ProductDetailsView = () => {
                 imageURL: imageURL
             }
         }));
-    };*/
+    };
 
 
     return (
@@ -118,7 +113,7 @@ const ProductDetailsView = () => {
                     </div>
                 ) : (
                     <div className="h-full w-full container mt-[120px] px-4 pb-10">
-                        {/*<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <img className="h-[450px] w-auto object-cover" src={state.product.imageURL} alt={state.product.name} />
 
@@ -159,11 +154,6 @@ const ProductDetailsView = () => {
                                     Add to Cart
                                 </button>
                             </div>
-                        </div>*/}
-
-                        <div className="h-[350px] w-full flex flex-col items-center justify-center gap-5">
-                            <IoIosArrowDown className="animate-bounce" size={24} color={"green"} />
-                            <p className="font-semibold text-xl">Coming soon.</p>
                         </div>
                     </div>
                 ) }
